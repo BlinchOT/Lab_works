@@ -1,11 +1,9 @@
 from typing import TypeAlias, Callable
 
-def get_left_node_value(node: int) -> int:
-    """Левый узел"""
+def get_left_node_value(node: int) -> int: # Левый узел
     return node * 3 + 1
 
-def get_right_node_value(node: int) -> int:
-    """Правый узел"""
+def get_right_node_value(node: int) -> int: # Правый узел
     return node * 3 - 1
 
 binTree: TypeAlias = dict[int, list['binTree'] | list]
