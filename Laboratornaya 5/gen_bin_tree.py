@@ -2,11 +2,11 @@ from collections import deque
 from typing import TypeAlias, Callable
 
 def get_left_node_value(node: int) -> int:
-    """Функция значения левого узла"""
+    """Левый узел"""
     return node ** 3
 
 def get_right_node_value(node: int) -> int:
-    """Функция значения правого узла"""
+    """Правый узел"""
     return node * node - 1
 
 binTree: TypeAlias = dict[int, list['binTree'] | list]
@@ -15,9 +15,8 @@ def gen_bin_tree(height: int = 4, root: int = 12,
                  left_node_value: intToInt = get_left_node_value,
                  right_node_value: intToInt = get_right_node_value) -> binTree:
     """
-    Функция генрации бинарного дерева
+    Функция бинарного дерева
     :param height: высота дерева
-        height < 0 - undefined behaviour
     :param root: значение корня дерева
     :param left_node_value: функция значения левого потомка узла
     :param right_node_value: функция значения правого потомка узла
