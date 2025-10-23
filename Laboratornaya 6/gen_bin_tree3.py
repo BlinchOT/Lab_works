@@ -8,7 +8,7 @@ def get_right_node_value(node: int) -> int: # Правый узел
 
 binTree: TypeAlias = dict[int, list['binTree'] | list]
 intToInt: TypeAlias = Callable[[int], int]
-def gen_bin_tree(tree: binTree, height: int = 4, node: int = 12,
+def gen_bin_tree(tree: binTree, height: int = 5, node: int = 10,
                  left_node_value: intToInt = get_left_node_value,
                  right_node_value: intToInt = get_right_node_value) -> None:
     """
