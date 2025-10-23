@@ -1,8 +1,8 @@
 import timeit
 from typing import Callable
 import matplotlib.pyplot as plt
-from gen_bin_tree3 import gen_bin_tree as rec_bin_tree # файл с 3 лабораторной работы
-from gen_bin_tree5 import gen_bin_tree as loop_bin_tree # файл с 5 лабораторной работы
+from gen_bin_tree3 import gen_bin_tree as rec_bin_tree
+from gen_bin_tree5 import gen_bin_tree as loop_bin_tree
 
 def benchmark(func: Callable, params: list[int], repeat: int = 5) -> list[float]:
     times = []
@@ -22,8 +22,6 @@ def make_subplot(x_params, y_params, ax, title, x_label, y_label, *labels):
     ax.legend()
 
 if __name__ == "__main__":
-
-
     heights = list(range(23))
     repeat = 1
     gen_bin_tree_custom_rec = lambda h: rec_bin_tree(
@@ -34,7 +32,6 @@ if __name__ == "__main__":
         left_node_value=lambda x: x + x, right_node_value=lambda x: 2 * x + 1)
     bin_tree_times = benchmark(gen_bin_tree_custom_loop, heights, repeat)
     bin_tree_rec_times = benchmark(gen_bin_tree_custom_rec, heights, repeat)
-
     plt.style.use('Solarize_Light2')
     fig, axes = plt.subplots(1, 1, figsize=(6, 6))
     fig.suptitle('Binary tree constructions comparison')
@@ -45,4 +42,3 @@ if __name__ == "__main__":
                  'loop', 'recursion')
     plt.tight_layout()
     plt.show()
-
