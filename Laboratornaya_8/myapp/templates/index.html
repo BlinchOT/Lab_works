@@ -1,0 +1,46 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - {{ myapp.name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">{{ myapp.name }} v{{ myapp.version }}</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Главная страница</h1>
+        <p>Добро пожаловать в приложение для отслеживания курсов валют!</p>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Быстрые ссылки</div>
+                    <div class="card-body">
+                        <a href="/users" class="btn btn-primary d-block mb-2">Список пользователей</a>
+                        <a href="/currencies" class="btn btn-success d-block mb-2">Курсы валют</a>
+                        <a href="/author" class="btn btn-info d-block">Об авторе</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Информация</div>
+                    <div class="card-body">
+                        <p><strong>Автор:</strong> {{ author.name }}</p>
+                        <p><strong>Группа:</strong> {{ author.group }}</p>
+                        <p><strong>Версия:</strong> {{ myapp.version }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

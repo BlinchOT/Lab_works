@@ -1,0 +1,2 @@
+2026-01-16 23:40:49 - currency_file - INFO - START: Вызов функции file_logged_func([1, 2, 3, 4, 5])
+2026-01-16 23:40:49 - currency_file - INFO - SUCCESS: Функция file_logged_func завершилась успешно. Результат: 15
